@@ -15,7 +15,7 @@ public/static/img/rankings/Shoes
 public/static/img/rankings/Skin
 public/static/img/rankings/Weapon
 storage/*.key
-.vendor
+vendor
 composer.lock
 .idea
 .vagrant
