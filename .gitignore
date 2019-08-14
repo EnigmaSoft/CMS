@@ -1,20 +1,25 @@
-vendor/
-node_modules/
-npm-debug.log
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-storage/*.key
-.env.*.php
-.env.php
-.env
-Homestead.yaml
+/node_modules
+/public/hot
+/public/storage
+/public/static/img/rankings/Accessory
+/public/static/img/rankings/Cap
+/public/static/img/rankings/Cape
+/public/static/img/rankings/Coat
+/public/static/img/rankings/Face
+/public/static/img/rankings/Glove
+/public/static/img/rankings/Hair
+/public/static/img/rankings/Longcoat
+/public/static/img/rankings/Pants
+/public/static/img/rankings/Shield
+/public/static/img/rankings/Shoes
+/public/static/img/rankings/Skin
+/public/static/img/rankings/Weapon
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
 Homestead.json
-
-# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
-.rocketeer/
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env

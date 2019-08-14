@@ -1,0 +1,49 @@
+/* 30. Stats
+   ========================================================================== */
+.dashboard-stats__item {
+	position:relative;
+	overflow:hidden;
+	padding:30px 20px;
+	margin-bottom:30px;
+	border-radius:2px;
+	box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)
+}
+
+.dashboard-stats__item>.fa {
+	position:absolute;
+	bottom:-20%;
+	left:-5%;
+	font-size:100px;
+	color:hsla(0,0%,100%,.15)
+}
+
+.dashboard-stats__item.dashboard-stats__item_red {
+	background-color:#ef5350
+}
+
+.dashboard-stats__item.dashboard-stats__item_orange {
+	background-color:#ffa726
+}
+
+.dashboard-stats__item.dashboard-stats__item_green {
+	background-color:#66bb6a
+}
+
+.dashboard-stats__item.dashboard-stats__item_light-blue {
+	background-color:#29b6f6
+}
+
+.dashboard-stats__title {
+	margin:0;
+	text-align:right;
+	font-size:45px;
+	font-weight:300;
+	color:#fff
+}
+
+.dashboard-stats__title>small {
+	display:block;
+	font-size:14px;
+	text-transform:capitalize;
+	color:rgba(255, 255, 255, 0.7);
+}

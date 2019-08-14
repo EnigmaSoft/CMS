@@ -1,0 +1,59 @@
+/* 16. Forms
+   ========================================================================== */
+
+
+form {
+	margin-bottom: 15px;
+}
+
+.form-control {
+	height: 32px;
+	@include box-shadow(none);
+    @include border-radius(2px);
+	&:focus {
+		 @include box-shadow(none);
+   		 border-color: $brand-primary;
+	}
+}
+
+
+.input-sm {
+	height: 26px;
+	padding: 3px 10px;
+	@include border-radius(2px);
+}
+
+select.input-sm {
+    height: 26px;
+    line-height: 26px;
+}
+
+.input-lg {
+	height: 45px;
+}
+
+.form-label {
+	display: block;
+	font-weight: 300;
+	margin-bottom: 8px;
+}
+
+.checkbox-group {
+	margin: 8px 0;
+}
+
+.checkbox-group .checkbox-inline + .checkbox-inline {
+	margin-left: 18px;
+}
+
+
+// Feedback states
+.has-success {
+  @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+}
+.has-warning {
+  @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+}
+.has-error {
+  @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+}

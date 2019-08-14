@@ -1,0 +1,42 @@
+/* 19. Badges
+   ========================================================================== */
+
+// Colors
+
+.badge-default {
+  @include badge-variant($badge-default-bg);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary-bg);
+}
+
+.badge-secondary {
+  @include badge-variant($badge-secondary-bg);
+}
+
+.badge-success {
+  @include badge-variant($badge-success-bg);
+}
+
+.badge-info {
+  @include badge-variant($badge-info-bg);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning-bg);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger-bg);
+}
+
+
+.badge-bordered {
+	color: #585858;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: solid 1px #585858;
+	background-color: transparent;
+	padding: 4px 10px;
+}

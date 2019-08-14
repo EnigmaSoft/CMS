@@ -1,0 +1,160 @@
+/* 20. Navs
+   ========================================================================== */
+
+/**
+ * Tabs
+ */
+
+.tabs-container {
+	margin-bottom: 30px;
+}
+
+.tab-wrapper {
+	margin-bottom: 10px;
+}
+
+.tabs-container {
+  .panel-body {
+  	border: solid 1px #ddd;
+  	border-top: 0 none;
+  }
+  &.tabs-vertical .panel-body {
+    border-top: solid 1px #ddd;
+  }
+}
+
+.nav-tabs > li > a:hover {
+	color: #434343;
+}
+
+.tabs-vertical {
+  & .nav-tabs {
+  	float: left;
+  	width: 85px;
+  	> li {
+  	  float: none;
+  	}
+  }
+  & .tab-content {
+  	overflow: hidden;
+  }
+}
+
+
+.tabs-vertical .nav-tabs > li {
+  &  > a {
+    	border-color: #ddd;
+    	border-radius: 0;
+    	margin-right: -1px;
+    	z-index: 5;
+  }
+  &:first-child a {
+	@include border-radius(4px 0 0 0);
+  }
+  &.active {
+    & a,
+    & a:hover,
+    & a:focus {
+     	border-color: #ddd;
+  	    border-right-color: #fff;
+    }
+  }
+}
+
+.tabs-right .nav-tabs {
+    float: right;
+    & > li {
+      & > a {
+        	margin-right: 0;
+	        margin-left: -1px;
+      }
+       &:first-child a {
+		 @include border-radius(0 4px 0 0);
+       }
+      &.active {
+        & > a,
+        & > a:hover,
+        & > a:focus {
+          border-color: #ddd;
+	        border-left-color: #fff;
+        }
+      }
+    }
+}
+
+
+/**
+ * Pills
+ */
+
+.nav-pills > li {
+  & > a {
+    	padding: 4px 12px;
+    	background-color: #FFF;
+    	@include border-radius(0);
+  }
+  & > a:hover,
+  &.active > a,
+  &.active > a:hover,
+  &.active > a:focus {
+       background-color: $brand-primary;
+	   color: #FFF;
+  }
+  & + li {
+    	margin-left: 0;
+  }
+  & > a:focus {
+  	background-color: #FFF;
+  	color: #434343;
+  }
+}
+
+.nav-pulls-default {
+	border: solid 1px #c7c6c6;
+	border-radius: 3px;
+	& > li {
+	  & > a {
+	    background-color: #ececec;
+    	color: #8c8b8b;
+  	  }
+    	& + li {
+    	  border-left: solid 1px #c7c6c6;
+    	}
+  	 &:first-child > a {
+	   @include border-radius(3px 0 0 3px);
+  	 }
+  	 &:last-child > a {
+	   @include border-radius(0 3px 3px 0);
+  	 }
+  	 & > a:hover,
+  	 &.active > a,
+     &.active > a:hover,
+     &.active > a:focus{
+  	    background-color: #FFF;
+	      color: #4e4e4e;
+  	 }
+	}
+}
+
+
+/**
+ * Nav Icons
+ */
+
+.nav-icons {
+	font-size: 20px;
+	& li {
+	  line-height: 1.1;
+	}
+	& > li {
+	  & > a {
+	    	padding: 3px;
+      	text-align: center;
+      	min-width: 30px;
+      	& i {
+      	  	margin: 0;
+	          line-height: 1;
+      	}
+	  }
+	}
+}

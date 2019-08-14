@@ -1,0 +1,58 @@
+/* 12. Pager & Pagination
+   ========================================================================== */
+
+
+.pager li > a, .pager li > span {
+	@include border-radius(4px);
+}
+
+.pagination [class^="icon-"], .pagination [class*=" icon-"] {
+	line-height: 1;
+}
+
+.pagination,
+.pager {
+  > li {
+     > a,
+     > span {
+        color: $brand-primary;
+     }
+  }
+}
+
+.pagination {
+  > li {
+	  > a:hover,
+	  > span:hover,
+	  > a:focus,
+	  > span:focus {
+		  z-index: 3;
+		  color: $gray-dark;
+		  background-color: #eeeeee;
+		  border-color: #dddddd;
+	}
+  }
+}
+
+
+.pagination {
+  > .active {
+	> a,
+	> span,
+	> a:hover,
+	> span:hover,
+	> a:focus,
+	> span:focus {
+		  background-color: $brand-primary;
+		  border-color: $brand-primary;
+		  color: $brand-white;
+		  z-index: 5;
+	}
+  }
+}
+
+
+.pager li > a:hover,
+.pager li > a:focus {
+	color: $gray-dark;
+}

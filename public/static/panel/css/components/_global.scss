@@ -1,0 +1,92 @@
+/* 01. Global
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+html { height: 100%; }
+
+body {
+	font-family: $font-family-base;
+	height: 100%;
+	color: $gray-dark;
+	&.login-page {
+		background-color: $gray-lighter;
+	}
+	&.page-error {
+		background-color: $gray-lighter;
+	}
+}
+
+img.avatar {
+	 width: 60px;
+	 height: 60px;
+}
+
+.md-editor { margin-bottom: 30px; }
+
+.jvectormap-section { margin-bottom: 15px; }
+
+.gray-bg { 	background-color: $gray-lighter !important; }
+
+hr { border-color: #dedede; border-bottom: solid 1px #FFF; }
+
+.entry-header {
+  @include clearfix();
+}
+
+.no-margins {
+	margin: 0 !important;
+}
+
+.col-with-divider div[class*="col-"]{
+	border-left: solid 1px #ddd;
+	&:first-child {border: 0 none;}
+}
+
+.no-border { border: 0 none !important; }
+
+i.ellipsis-icon {
+	@include rotate(90deg);
+	font-size: 18px;
+	margin: 0 0 0 5px;
+}
+
+.embed-section { margin-bottom: 20px; }
+
+.m-r-15 { margin-right: 15px; }
+
+.m-l-20 { margin-left: 20px; }
+
+.m-b-20 { margin-bottom: 20px; }
+
+.pt-15 { padding-top: 15px; }
+
+.line-dashed {
+   border-top: 1px dashed #DDD;
+   height: 1px;
+   margin: 20px auto;
+}
+
+.entry-header {
+	border-bottom: solid 1px #dedede;
+	padding: 0 15px 8px;
+	margin-bottom: 30px;
+}
+.page-title {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+.page-heading .page-title {
+	margin-bottom: 10px;
+}
+
+.page-heading .btn-add {
+	margin: 3px 0 0 15px;
+}
+
+.entry-header .page-title {
+	float: left;
+	margin: 10px 0;
+}

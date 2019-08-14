@@ -1,0 +1,319 @@
+/* 07. Dashboard
+   ========================================================================== */
+.primary-bg {
+	background-color: $brand-primary;
+	color: $brand-white;
+	border-color: $brand-primary;
+}
+
+.secondary-bg {
+	background-color: $brand-secondary;
+	color: $brand-white;
+	border-color: $brand-secondary;
+}
+
+.info-bg {
+	background-color: $brand-info;
+	color: $brand-white;
+	border-color: $brand-info;
+}
+
+.teal-bg {
+	background-color: $brand-teal;
+	color: $brand-white;
+	border-color: $brand-teal;
+}
+
+/*Knob Chart*/
+
+.knob-outer {
+   padding-right: 15px;
+}
+
+.knob {
+	border: 0;
+	width: 82px;
+}
+
+/*Progress Dashboard*/
+.mini-progress {
+	display: block;
+	padding-top: 16px;
+}
+
+.progress-media {
+	overflow: hidden;
+}
+
+.progress-label {
+	float: left;
+	min-width: 65px;
+	padding-right: 10px;
+	text-align: right;
+	line-height: 1.3;
+}
+
+.progress-wrap {
+	overflow: hidden;
+	margin-top: 5px;
+}
+
+/*List styles*/
+
+ul.list-item,
+ul.feed-item-list {
+	color: #565555;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.list-item li,
+ul.feed-item-list li {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0 0 5px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	&:last-child {
+	  border-bottom: 0 none;
+	}
+}
+
+ul.mailbox-list {
+	font-size: 16px;
+	 li {
+	 	 padding-bottom: 10px;
+		 .badge {
+			min-width: 40px;
+			padding: 4px 8px;
+		}
+	}
+}
+
+
+ul.popular-article {
+    margin-bottom: 20px;
+    & li:last-child {
+       border-bottom: 1px solid #e5e5e5;
+    }
+}
+
+ul.member-list div.user-avatar,
+.user-view div.user-avatar,
+.product-view .product-thumb {
+	float: left;
+	margin: 0 12px 5px 0;
+}
+
+.product-view .product-thumb {
+	width: 62px;
+}
+
+.product-view .product-detail {
+	overflow: hidden;
+}
+
+ul.member-list .user-detail,
+.user-view .user-detail,
+ul.message-list .message-body {
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+ul.message-list .message-body {
+	padding-top: 3px;
+}
+
+ul.member-list .user-detail h5,
+ul.message-list .message-body h5,
+.user-view .user-detail h5,
+.product-view .product-detail h5  {
+	font-weight: 600;
+	margin-bottom: 0;
+	line-height: 1.2;
+	font-family: $font-family-base;
+}
+
+ul.message-list .message-body h5,
+.product-view .product-detail h5,
+.popular-article .feed-title,
+.popular-article .feed-title > a {
+	 @include text-overflow();
+}
+
+.popular-article .feed-title > a {
+    display: block;
+}
+
+ul.member-list .user-detail p,
+.user-view .user-detail p,
+.product-view .product-detail p,
+ul.message-list .message-body p,
+.feed-element .feed-content p {
+	margin-bottom: 5px;
+}
+
+ul.message-list li > .icon-mail {
+	float: left;
+	line-height: 1;
+	margin: 5px 12px 5px 0;
+}
+
+div.entry-meta {
+	color: #bcbbbb;
+	margin: 5px 0;
+	font-size: 12px;
+}
+
+div.entry-meta > span {
+	margin-right: 20px;
+}
+
+div.entry-meta > span i {
+	font-size: 16px;
+	margin: 0 8px 0 0;
+	vertical-align: middle;
+}
+
+div.entry-meta > span:last-child { margin-right: 0; }
+
+div.user-view {
+	overflow: hidden;
+	margin-bottom: 15px;
+	color: #585858;
+}
+
+div.product-view {
+	overflow: hidden;
+	margin-bottom: 22px;
+	color: #585858;
+}
+
+
+ul.todo-list { margin-bottom: 24px; }
+
+ul.todo-list .checkbox-replace,
+ul.todo-list .radio-replace {
+	margin-bottom: 6px;
+	margin-top: 0;
+}
+
+.todo-list > li .checkbox-replace.checked label {
+   text-decoration: line-through;
+   @include transition(all 300ms ease-in-out);
+}
+
+div.more {
+	margin-bottom: 5px;
+}
+
+.connected-users {
+	overflow: hidden;
+}
+
+.media-inline,
+.connected-users {
+	margin: 10px 0;
+}
+
+.media-inline img {
+	margin-right: 2px;
+	vertical-align: top;
+}
+
+.connected-users .icon-shareable {
+	color: #4c4b4b;
+	font-size: 30px;
+	margin: 8px 25px;
+}
+
+/*Comment Section */
+
+ul.comments-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+ul.comments-list li {
+	border-bottom: solid 1px #e5e5e5;
+	padding-bottom: 7px;
+	margin-bottom: 20px;
+	position: relative;
+	&:last-child {
+	  border-bottom: 0 none;
+	}
+}
+
+ul.removeable-list li { position: relative; padding-right: 50px; }
+
+ul.removeable-list li > .remove {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+ul.comments-list li .comment-head,
+.feed-element .feed-head {
+	font-weight: 600;
+	color: #504f4f;
+	margin-bottom: 5px;
+}
+
+ul.comments-list li .comment-head a,
+.feed-element .feed-head a {
+	color: $gray-base;
+}
+
+ul.comments-list li .comment-head a:hover,
+.feed-element .feed-head a:hover {
+	color: $brand-primary;
+}
+
+
+ul.comments-list li .comment-text,
+.feed-element .feed-content {
+	color: #737171;
+}
+
+ul.comments-list li .comment-footer,
+ul.feed-item-list li .feed-footer  {
+	margin-bottom: 10px;
+}
+
+.comment-footer .btn + .btn,
+.feed-footer .btn + .btn {
+	margin-left: 8px;
+}
+
+ul.feed-item-list .feed-element {
+	margin-bottom: 8px;
+}
+
+ul.feed-item-list .feed-title {
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 3px;
+}
+
+ul.feed-item-list .feed-meta {
+	color: #b0afaf;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+.blockUI {
+	background-image:url(../images/loading.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 479px) {
+
+  .notifications.dropdown .dropdown-menu { width: 260px; }
+
+  .lockup-video .lockup-thumbnail { float: none; }
+
+}

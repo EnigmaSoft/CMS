@@ -1,0 +1,103 @@
+/* 24. Graphs
+   ========================================================================== */
+
+/**
+ * Charts
+ */
+.chart-wrapper {
+	margin-bottom: 15px;
+}
+
+/**
+ * Flot Charts
+ */
+
+.flot-chart {
+	height: 200px;
+	width: 100%;
+	display: block;
+}
+
+.float-chart-lg {
+	height: 220px;
+}
+
+.float-chart-md {
+	height: 180px;
+}
+
+.last-month-outer {
+	height: 100%;
+	position: relative;
+	top: 2px;
+	margin: 0 -2px 0 -1px;
+}
+
+.float-chart-sm {
+	height: 85px;
+}
+
+.flot-chart-content {
+    height: 100%;
+    width: 100%;
+}
+
+.flot-chart-pie-content {
+    height: 200px;
+    margin: auto;
+    width: 200px;
+}
+
+/**
+ * Morris Charts
+ */
+
+.morris-chart {
+	position: relative;
+}
+
+/**
+ * ChartJs Charts
+ */
+
+.canvas-chart {
+	position: relative;
+}
+
+.has-doughnut-legend {
+	margin-right: 80px;
+}
+
+ul.doughnut-legend {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	top: 30px;
+	right: 28px;
+	font-size: 13px;
+}
+
+ul.doughnut-legend li span {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	@include border-radius(50%);
+	vertical-align: middle;
+	margin: 0 8px 2px 0;
+}
+
+/**
+ * Sparkline Tooltips Charts
+ */
+
+.jqstooltip {
+  background-color: rgba(43, 48, 58, 0.8);
+  padding: 3px 5px 5px 5px;
+  min-height: 16px;
+  @include border-radius(3px);
+}
+
+.jqstooltip {
+ 	@include box-sizing(content-box);
+}

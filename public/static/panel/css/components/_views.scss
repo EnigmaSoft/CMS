@@ -1,0 +1,137 @@
+/* 08. Views
+   ========================================================================== */
+.card-header {
+	position: relative;
+	clear: both;
+	padding: 25px;
+}
+
+.card {
+	margin-bottom: 25px;
+	font-family: $font-roboto;
+	background-color: #f5f5f5;
+	border: solid 1px #DDD;
+}
+
+.card-simple {
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 1px #DDD;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.card-content {
+	padding: 25px;
+}
+
+.card-short-description h5 {
+	font-size: 16px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+
+.card-photo,
+.card-short-description  {
+    display: table-cell;
+    vertical-align: top;
+	&.media-middle {
+	  vertical-align: middle;
+   }
+}
+
+
+.card-photo {
+	padding-right: 20px;
+}
+
+.card-cover {
+	color: #FFF;
+	background-color: #000;
+	-webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+.card-short-description {
+	width: 10000px;
+}
+
+img.size-105 {
+	height: 105px;
+	width: 105px;
+}
+
+.avatar-shadow {
+	@include box-shadow(0 0 5px #949494);
+	padding: 4px;
+	background-color: #FFF;
+}
+
+.card .badges .badge-bordered {
+	font-weight: 400;
+	background-color: #FFF;
+	text-transform: none;
+	padding: 5px 12px;
+	& + .badge {
+		margin-left: 10px;
+	}
+}
+
+.card .action-dropdown {
+    bottom: -20px;
+    position: absolute;
+    right: 25px;
+}
+
+.col-checkbox {
+	float: left;
+	margin-right: 20px;
+}
+
+.col-checkbox.col-space {
+	padding-left: 8px;
+}
+
+.col-selectbox {
+	float: left;
+}
+
+.col-selectbox  .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+
+.col-selectbox + .col-selectbox {
+	margin-left: 15px;
+}
+
+.datatable-wrapper { margin-bottom: 20px; }
+
+.datatable-wrapper .data-col-first,
+.datatable-wrapper .data-col-last {
+	position: relative;
+	float: left;
+}
+
+.datatable-wrapper .data-col-last {
+	float: right;
+}
+
+@media screen and (max-width: 479px) {
+
+	.datatable-wrapper .data-col-first,
+	.datatable-wrapper .data-col-last {
+		  float: none;
+	}
+
+	.datatable-wrapper .data-col-first {
+		  margin-bottom: 15px;
+	}
+
+}

@@ -1,0 +1,39 @@
+/* 23. Progress bars
+   ========================================================================== */
+
+.progress,
+.progress-bar {
+	@include box-shadow(none);
+}
+
+
+.sm-progress {
+	height: 8px;
+	@include border-radius(1px);
+	margin-bottom: 10px;
+}
+
+
+/**
+ * Variations
+ */
+
+.progress-bar-success {
+  @include progress-bar-variant($progress-bar-success-bg);
+}
+
+.progress-bar-info {
+  @include progress-bar-variant($progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+  @include progress-bar-variant($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  @include progress-bar-variant($progress-bar-danger-bg);
+}
+
+.progress-bar-default .progress-bar {
+	background-color: #babbba;
+}

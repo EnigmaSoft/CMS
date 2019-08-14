@@ -1,0 +1,74 @@
+/* 31. Comments
+   ========================================================================== */
+.dashboard-comments__item {
+    position:relative;
+    padding:18px 20px;
+    border-bottom:1px solid #eee
+}
+
+.dashboard-comments__item:last-child {
+    border-bottom:0
+}
+
+.dashboard-comments__controls {
+    margin-top:10px
+}
+
+.dashboard-comments__controls > a {
+    display:inline-block;
+    font-size:12px;
+    text-transform:uppercase;
+    color:#757575
+}
+
+.dashboard-comments__controls > a:focus,
+.dashboard-comments__controls > a:hover {
+    color:#1f8fe7
+}
+
+.dashboard-comments__controls > a + a {
+    margin-left:8px
+}
+
+.dashboard-comments__avatar {
+    display:block;
+    float:left;
+    margin-right:20px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    overflow:hidden;
+}
+
+.dashboard-comments__avatar > img {
+    width:100%;
+    height:auto
+}
+
+.dashboard-comments__body {
+    overflow:hidden
+}
+
+.dashboard-comments__sender {
+    color:#212121;
+    font-weight:700;
+    margin:5px 0
+}
+
+.dashboard-comments__sender > small {
+    margin-left:5px;
+    font-size:12px;
+    font-weight:400;
+    color:#9e9e9e
+}
+
+@media (max-width:767px) {
+    .dashboard-comments__sender > small {
+        display:block;
+        margin:5px 0 10px
+    }
+}
+
+.dashboard-comments__content {
+    color:#757575
+}

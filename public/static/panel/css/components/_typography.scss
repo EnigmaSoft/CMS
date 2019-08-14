@@ -1,0 +1,60 @@
+/* 02. Typography
+   ========================================================================== */
+
+a {
+  color: $link-color;
+  &:hover, &:active, &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+  &:hover, &:focus, &.link {
+	color: $brand-primary;
+  }
+  &.link:hover {
+  	color: $gray-base;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	font-family: $font-roboto;
+	margin: 0 0 15px;
+}
+
+// Header Styles
+h1 { font-size: $h1-fontsize; }
+h2 { font-size: $h2-fontsize; }
+h3 { font-size: $h3-fontsize; }
+h4 { font-size: $h4-fontsize; margin-bottom: 12px; }
+h5 { font-size: $h5-fontsize; margin-bottom: 10px; }
+h6 { font-size: $h6-fontsize; margin-bottom: 8px; }
+.title { font-weight: 400; }
+h3.title { 	font-size: $h4-fontsize; }
+
+// Text Styles
+em { font-style: italic; }
+b, strong { font-weight: 600; }
+small, .small { font-size: 90%; }
+.uppercase { text-transform: uppercase; }
+.smaller { font-size: 10px; }
+
+
+p { margin-bottom: 15px; }
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+
+@include text-emphasis-variant('.text-success', $state-success-text);
+
+@include text-emphasis-variant('.text-info', $state-info-text);
+
+@include text-emphasis-variant('.text-warning', $state-warning-text);
+
+@include text-emphasis-variant('.text-danger', $state-danger-text);
+
+@include text-emphasis-variant('.green-color', $state-green-text);
+
+@include text-emphasis-variant('.red-color', $state-red-text);
+
+@include text-emphasis-variant('.text-purple', $state-purple-text);
+
+@include text-emphasis-variant('.text-white', $brand-white);

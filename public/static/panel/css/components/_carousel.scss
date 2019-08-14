@@ -1,0 +1,30 @@
+/* 27. Carousel
+   ========================================================================== */
+
+.carousel-footer {
+	overflow: hidden;
+	margin-bottom: 22px;
+}
+
+.carousel-footer > strong {
+	line-height: 1.75;
+}
+
+.carousel-controller {
+	float: left;
+	margin-right: 12px;
+}
+
+.carousel-controller a.btn-carousel {
+	color: $brand-white;
+	background-color: $brand-primary;
+	float: left;
+	padding: 2px 6px;
+}
+
+.carousel-controller a.btn-carousel:hover {
+	 background-color: #585858;
+	 color: $brand-white;
+}
+
+.carousel-footer.top-space { margin-top: 25px; }

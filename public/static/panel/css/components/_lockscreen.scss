@@ -1,0 +1,64 @@
+/* 32. Lockscreen
+========================================================================== */
+.lockscreen {
+    background:#d2d6de;
+    vertical-align: middle;
+    display: table;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.lockscreen-wrapper {
+    max-width:400px;
+    margin:auto auto;
+    vertical-align: middle;
+    padding-top: 0;
+    display: table-cell;
+}
+
+.lockscreen .lockscreen-name {
+    text-align:center;
+    font-weight:600
+}
+
+.lockscreen-item {
+    border-radius:4px;
+    padding:0;
+    background:#fff;
+    position:relative;
+    margin:10px auto 30px auto;
+    width:290px
+}
+
+.lockscreen-image {
+    border-radius:50%;
+    position:absolute;
+    left:-10px;
+    top:-25px;
+    background:#fff;
+    padding:5px;
+    z-index:10
+}
+
+.lockscreen-image > img {
+    border-radius:50%;
+    width:70px;
+    height:70px;
+}
+
+.lockscreen-credentials {
+    margin-left:70px
+}
+
+.lockscreen-credentials .form-control {
+    border:0
+}
+
+.lockscreen-credentials .btn {
+    background-color:#fff;
+    border:0;
+}
+
+.lockscreen-footer {
+    margin-top:10px
+}

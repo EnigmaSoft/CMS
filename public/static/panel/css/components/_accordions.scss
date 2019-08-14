@@ -1,0 +1,50 @@
+/* 21. Accordions
+   ========================================================================== */
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-group {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 2px;
+	@include border-radius(4px);
+    @include box-shadow(none);
+}
+
+.accordion-inner {
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 20px;
+}
+
+.accordion-heading .accordion-toggle {
+    display: block;
+	position: relative;
+	color: $gray;
+}
+
+.accordion-heading .accordion-toggle:before {
+    color: $gray-dark;
+    content: "\e763";
+    display: inline-block;
+    float: right;
+    font-family: "entypo";
+    font-size: 18px;
+    margin-left: 10px;
+    position: relative;
+	@include transition(all 300ms ease-in-out);
+}
+
+.accordion-heading .accordion-toggle.collapsed:before {
+	@include rotate(180deg);
+}
+
+.accordion-heading .title {
+	margin: 0;
+	padding: 12px 20px;
+	font-size: 16px;
+}
+
+.accordion-toggle {
+    cursor: pointer;
+}

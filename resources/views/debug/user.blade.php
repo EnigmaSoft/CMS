@@ -1,0 +1,20 @@
+<pre>
+@php
+    var_dump(Illuminate\Support\Facades\Auth::user()->gm);
+@endphp
+@php
+    var_dump(Session::get('role'));
+@endphp
+@php
+    /*var_dump(App\User::find(2));*/
+@endphp
+@php
+    var_dump(config('app.properties.test'));
+@endphp
+@php
+    var_dump(Session::all());
+@endphp
+@php
+    var_dump(Auth::user()['attributes']['gm']);
+@endphp
+</pre>

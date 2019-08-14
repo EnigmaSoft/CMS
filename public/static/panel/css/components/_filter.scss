@@ -1,0 +1,44 @@
+/* 11. Filter
+   ========================================================================== */
+
+.filter-wrapper {
+	padding: 20px 10px 10px;
+	background-color: $brand-white;
+}
+
+.filter-wrapper .form-inline .form-group {
+	margin-right: 40px;
+}
+
+.filter-wrapper .form-label { font-weight: 600; }
+
+.filter-wrapper  .checkbox-group { margin: 10px 0 6px; }
+
+.filter-header .close {
+	text-shadow: none;
+	font-size: 20px;
+	@include opacity(1);
+	font-weight: normal;
+}
+
+.filter-wrapper .form-inline .filter-btn {
+	margin: 25px 0 0;
+}
+
+.btn-filter {
+	display: inline-block;
+	border: solid 1px #DEDEDE;
+	line-height: 1;
+	padding: 8px 12px;
+	font-size: 24px;
+	vertical-align: middle;
+	@include border-radius(4px);
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+	.filter-wrapper .form-inline .form-group {
+		margin-right: 0;
+	}
+
+}

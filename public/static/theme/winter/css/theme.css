@@ -1,0 +1,41 @@
+/*
+ * Copyright (C) 2017 Snopboy <http://forum.ragezone.com/members/1333372200.html>
+ *
+ * This program is a non-free PAID software and may not be used and / or
+ * distributed without valid license and written approval by the original author.
+ * See the Software License for more details.
+ *
+ * You should have received a copy of the License
+ * along with this program.  If not, see
+ * <https://www.binpress.com/license/view/l/4fb8be2be60a2357a96b0bfd469bb7aa/>.
+ */
+
+
+/**
+ * Summer Theme Stylesheet File
+ */
+
+.enigma {
+    background: #ffffff url("../img/background-top.jpg") no-repeat center top;
+}
+
+.wrapper {
+    background: transparent url("../img/background-bottom.jpg") no-repeat center bottom;
+}
+
+#logo {
+    background: transparent url("../img/logo.png") no-repeat center center;
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 40px;
+    width: 400px;
+    height: 107px;
+    margin: 0px auto;
+    transition: opacity 0.3s ease-in-out 0s;
+}
+
+#logo:hover {
+    opacity: 0.5;
+}

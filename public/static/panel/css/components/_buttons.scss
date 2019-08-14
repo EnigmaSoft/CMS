@@ -1,0 +1,173 @@
+/* 22. Buttons
+   ========================================================================== */
+
+.btn {
+	@include border-radius(3px);
+	font-weight: $btn-font-weight;
+	text-transform: uppercase;
+	line-height: 1.2867;
+}
+
+.btn-rounded {
+   @include border-radius(50px);
+}
+
+.btn-2x {
+	padding: 10px 16px;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+	padding: 4px 12px;
+}
+
+.btn-fab {
+	@include border-radius(50%);
+	background-color: #FFF;
+	color: $brand-primary;
+	min-width: 46px;
+	@include box-shadow(0px 2px 4px #333);
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-blue {
+  @include button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+}
+
+.btn-black {
+  @include button-variant($btn-black-color, $btn-black-bg, $btn-black-border);
+}
+
+// Alternate buttons Outline
+// --------------------------------------------------
+
+.btn-primary.btn-outline {
+  $btn-primary-color: $btn-primary-bg;
+  @include button-variant-outline($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn-success.btn-outline {
+  $btn-success-color: $btn-success-bg;
+  @include button-variant-outline($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+
+.btn-info.btn-outline {
+  $btn-info-color: $btn-info-bg;
+  @include button-variant-outline($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+.btn-warning.btn-outline {
+  $btn-warning-color: $btn-warning-bg;
+  @include button-variant-outline($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn-danger.btn-outline {
+  $btn-danger-color: $btn-danger-bg;
+  @include button-variant-outline($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.btn-secondary.btn-outline {
+  $btn-secondary-color: $btn-secondary-bg;
+  @include button-variant-outline($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-blue.btn-outline {
+  $btn-blue-color: $btn-blue-bg;
+  @include button-variant-outline($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+}
+
+.btn-black.btn-outline {
+  $btn-black-color: $btn-black-bg;
+  @include button-variant-outline($btn-black-color, $btn-black-bg, $btn-black-border);
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: $brand-primary;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover,
+  &:focus {
+    color: $gray-base;
+    background-color: transparent;
+	text-decoration: none;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.btn-white {
+	background-color: #FFF;
+	border-color: #ccc;
+}
+
+.panel > .btn-block {
+	@include border-radius(0);
+}
+
+.bs-example .btn,
+.bs-example-group .btn-group {
+	margin: 4px 8px 4px 0;
+}
+
+.bs-example-block .btn {
+	margin: 6px 0;
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+	font-weight: normal;
+	margin-left: 0;
+	margin-right: 0;
+}

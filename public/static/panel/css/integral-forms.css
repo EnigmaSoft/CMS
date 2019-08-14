@@ -1,0 +1,374 @@
+.form-checkbox {
+	position: relative;
+	z-index: 1;
+}
+
+.form-checkbox > input {
+    height: 20px;
+    opacity: 0;
+    position: absolute;
+    width: 20px;
+    z-index: 2;
+	cursor: pointer;
+}
+
+.form-checkbox > input + .check {
+    border: 1px solid #c3c2c2;
+	border-radius: 2px;
+    color: #036eff;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    width: 20px;
+    z-index: -1;
+}
+
+.form-checkbox > input + .check .fa {
+    display: none;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 2px;
+}
+
+.form-checkbox > input:checked + span .fa {
+    display: block;
+    opacity: 1;
+}
+
+
+/*Radio and Checkbox styles*/
+
+.checkbox-replace {
+  padding-left: 20px;
+}
+
+.form-inline .checkbox-replace input[type="checkbox"] {
+	margin-left: -20px;
+	position: absolute;
+}
+
+.form-inline .checkbox-replace label { padding-left: 5px; }
+
+.form-inline .checkbox-replace { margin-right: 20px; }
+
+.form-inline .checkbox-replace:last-child { margin-right: 0; }
+
+.checkbox-replace label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+.checkbox-replace label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  margin-left: -20px;
+  margin-top: 2px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox-replace label::after {
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 3px;
+  top: 5px;
+  margin-left: -20px;
+  font-size: 11px;
+  color: #555555;
+}
+.checkbox-replace input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.checkbox-replace input[type="checkbox"]:focus + label::before {
+  outline: 0 none;
+}
+.checkbox-replace input[type="checkbox"]:checked + label::after {
+    background-color: #ddd;
+    content: "";
+}
+.checkbox-replace input[type="checkbox"]:disabled + label {
+  opacity: 0.65;
+}
+
+.checkbox-replace input[type="checkbox"]:disabled + label::before {
+  background-color: #f7f7f7;
+  cursor: not-allowed;
+}
+
+.checkbox-replace.checkbox-inline {
+  margin-top: 0;
+}
+
+.checkbox-primary label::before {
+   border-color: #036eff;
+}
+.checkbox-primary input[type="checkbox"]:checked + label::after {
+    background-color: #036eff;
+}
+
+.checkbox-danger label::before {
+  border-color: #ff0018;
+}
+.checkbox-danger input[type="checkbox"]:checked + label::after{
+   background-color: #ff0018;
+}
+
+.checkbox-info label::before {
+   border-color: #29b6f6;
+}
+.checkbox-info input[type="checkbox"]:checked + label::after {
+    background-color: #29b6f6;
+}
+
+.checkbox-warning  label::before {
+  border-color: #ffc400;
+}
+.checkbox-warning input[type="checkbox"]:checked + label::after {
+    background-color: #ffc400;
+}
+
+.checkbox-success  label::before {
+  border-color: #029b17;
+}
+.checkbox-success input[type="checkbox"]:checked + label::after {
+    background-color: #029b17;
+}
+
+.radio-replace {
+  padding-left: 20px;
+}
+.radio-replace  label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 5px;
+}
+.radio-replace  label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  margin-left: -20px;
+  margin-top: 2px;
+  border: 1px solid #DDD;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+.radio-replace  label::after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 12px;
+  height: 12px;
+  left: 3px;
+  top: 5px;
+  margin-left: -20px;
+  border-radius: 50%;
+  background-color: #ddd;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+.radio-replace  input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.radio-replace  input[type="radio"]:focus + label::before {
+  outline: 0 none;
+}
+.radio-replace  input[type="radio"]:checked + label::after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.radio-replace  input[type="radio"]:disabled + label {
+  opacity: 0.65;
+}
+.radio-replace  input[type="radio"]:disabled + label::before {
+  cursor: not-allowed;
+}
+.radio-replace.radio-inline {
+  margin-top: 0;
+}
+
+.radio-primary input[type="radio"] + label::after {
+  background-color: #036eff;
+}
+.radio-primary input[type="radio"]:checked + label::before {
+  border-color: #036eff;
+}
+.radio-primary input[type="radio"]:checked + label::after {
+  background-color: #036eff;
+}
+
+.radio-danger input[type="radio"] + label::after {
+  background-color: #ff0018;
+}
+.radio-danger input[type="radio"]:checked + label::before {
+  border-color: #ff0018;
+}
+.radio-danger input[type="radio"]:checked + label::after {
+  background-color: #ff0018;
+}
+
+.radio-info input[type="radio"] + label::after {
+  background-color: #29b6f6;
+}
+.radio-info input[type="radio"]:checked + label::before {
+  border-color: #29b6f6;
+}
+.radio-info input[type="radio"]:checked + label::after {
+  background-color: #29b6f6;
+}
+
+
+.radio-warning input[type="radio"] + label::after {
+  background-color: #ffc400;
+}
+.radio-warning input[type="radio"]:checked + label::before {
+  border-color: #ffc400;
+}
+.radio-warning input[type="radio"]:checked + label::after {
+  background-color: #ffc400;
+}
+
+.radio-success input[type="radio"] + label::after {
+  background-color: #029b17;
+}
+.radio-success input[type="radio"]:checked + label::before {
+  border-color: #029b17;
+}
+.radio-success input[type="radio"]:checked + label::after {
+  background-color: #029b17;
+}
+
+/*Form wizard*/
+
+.form-wizard .tab-content .pager.wizard .first a {
+	margin-right: 8px;
+}
+
+.form-wizard .tab-content .pager.wizard .last a {
+	margin-left: 8px;
+}
+
+.wizard-navbar {
+	margin: 60px auto 20px;
+}
+
+.wizard-navbar > ul {
+	display: table;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	font-weight: 600;
+	padding: 0;
+	list-style: none outside none;
+	table-layout: fixed;
+}
+
+.wizard-navbar > ul li {
+	display: table-cell;
+	width: 1%;
+	position: relative;
+	padding: 0 10px;
+}
+
+.wizard-navbar > ul li a {
+	color: #a2a2a2;
+}
+
+.wizard-navbar > ul li a span {
+    background-color: #eeeeee;
+    border-radius: 50%;
+    color: #898b8f;
+    display: block;
+    height: 40px;
+    left: 50%;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -50px;
+    position: absolute;
+    text-align: center;
+    transition: all 300ms ease-in-out 0s;
+	-webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    -moz-transition: all 300ms ease-in-out 0s;
+    width: 40px;
+	z-index: 5;
+}
+
+.wizard-navbar > ul li.completed a span {
+	background-color: #36a2eb;
+	color: #FFF;
+}
+
+.wizard-navbar > ul li.active a span {
+	background-color: #ec407a;
+	color: #FFF;
+}
+
+.wizard-navbar > ul li.active a,
+.wizard-navbar > ul li.completed a {
+	color: #505050;
+}
+
+.wizard-navbar > ul li:before,
+.wizard-navbar > ul li:after {
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 50%;
+	background-color: #eeeeee;
+	top: -32px;
+	left: 0;
+}
+
+.wizard-navbar > ul li:after {
+	left: auto;
+	right: 0;
+}
+
+.wizard-navbar > ul li.active:before,
+.wizard-navbar > ul li.active:after {
+	background-color: #ec407a;
+}
+
+.wizard-navbar > ul li.completed:before,
+.wizard-navbar > ul li.completed:after {
+	background-color: #36a2eb;
+}
+
+label.error {
+	display: block;
+	color: #FF0000;
+	font-weight: 400;
+	margin: 5px 0;
+}

@@ -1,0 +1,417 @@
+/* 04. Sidebar
+   ========================================================================== */
+
+.page-sidebar {
+    background-color: $sidebar-bg;
+    color: #252525;
+    display: table-cell;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    width: 280px;
+    z-index: 101;
+	@include box-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+}
+
+.site-header {
+    overflow: hidden;
+    padding: 25px 20px;
+    position: relative;
+    z-index: 101;
+}
+
+.site-logo {
+    float: left;
+    position: relative;
+}
+
+.page-container.sidebar-collapsed .site-header {
+	padding: 16px;
+}
+
+.page-container.sidebar-collapsed .site-logo {
+    overflow: hidden;
+    width: 0;
+}
+
+.site-logo a {
+    color: #252525;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sidebar-collapse,
+.sidebar-mobile-menu {
+    float: right;
+    position: relative;
+}
+
+.sidebar-collapse a.sidebar-collapse-icon,
+.sidebar-mobile-menu a.mobile-menu-icon {
+	color: #252525;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+	@include transition(all 200ms ease-in-out 0s);
+}
+
+.sidebar-collapse a.sidebar-collapse-icon i.icon-menu,
+.sidebar-mobile-menu a.mobile-menu-icon i.icon-menu {
+	margin: 0;
+}
+
+.page-container.horizontal-menu header.navbar {
+	background-color: $sidebar-bg;
+	border: 0 none;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-brand {
+	height: 60px;
+	padding: 18px 20px;
+}
+
+.page-sidebar .sidebar-fixed {
+	position: fixed;
+	height: 100%;
+	width: 280px;
+}
+
+.sidebar-collapsed .page-sidebar,
+.sidebar-collapsed .page-sidebar .sidebar-fixed {
+	width: 66px;
+}
+
+.sidebar-collapsed .page-sidebar .sidebar-fixed {
+	position: relative;
+}
+
+.sidebar-collapsed .sidebar-fixed.ps-container {
+	overflow: visible;
+}
+
+
+/**
+ * Sidebar Menu
+ */
+
+ul.main-menu {
+    font-size: 14px;
+    list-style: outside none none;
+    margin: 0 0 20px;
+    padding: 0;
+	font-family: $font-roboto;
+}
+
+ul.main-menu li {
+    position: relative;
+	&.navigation-header {
+		text-transform: uppercase;
+		padding: 5px 20px;
+		color: #9A9A9A;
+		letter-spacing: 0.035em;
+		font-weight: 700;
+		font-size: 11px;
+	}
+	& + .navigation-header {
+		margin-top: 10px;
+	}
+}
+
+ul.main-menu li a {
+    color: #252525;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+ul.main-menu > li.active > a,
+ul.main-menu > li > a:hover,
+ul.main-menu > li > a:focus {
+	color: $brand-primary;
+}
+
+ul.main-menu > li:hover > a {
+	color: $brand-primary;
+}
+
+ul.main-menu .nav > li > a:hover,
+ul.main-menu .nav > li > a:focus,
+ul.main-menu .nav > li.has-sub.active > a {
+	background-color: transparent;
+	color: $brand-secondary;
+}
+
+
+ul.main-menu .nav > li > a { color: #252525; }
+
+ul.main-menu li i {
+	margin-right: 16px;
+	font-size: 15px;
+	min-height: 23px;
+}
+
+ul.main-menu li ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+	background-color: $brand-white;
+	overflow: hidden;
+}
+
+
+ul.main-menu > li > ul > li:before {
+    background-color: transparent;
+    color: #2f2e2e;
+    content: "";
+    font-weight: 400;
+    height: 18px;
+    left: 30px;
+    position: absolute;
+    top: 13px;
+	@include transition(all 0.4s ease 0s);
+    width: 3px;
+    z-index: 2;
+}
+
+
+ul.main-menu li ul li.active span.title {
+	font-weight: 500;
+}
+
+ul.main-menu li ul li.active:before,
+ul.main-menu li ul li:hover:before{
+	background-color: $brand-secondary;
+}
+
+ul.main-menu li  ul li.active > a,
+ul.main-menu li  ul li.has-sub.active > a:before,
+ul.main-menu li  ul li.has-sub:hover > a:before,
+ul.main-menu li  ul li.has-sub > a:focus:before   {
+	color: $brand-secondary;
+}
+
+
+ul.main-menu li ul > li > a {
+	padding-left: 56px;
+}
+
+ul.main-menu li ul > li > ul > li > a {
+	padding-left: 76px;
+}
+
+ul.main-menu li ul > li > ul > li > ul > li > a {
+	padding-left: 96px;
+}
+
+ul.main-menu li ul > li > ul > li > ul > li > ul > li > a {
+	padding-left: 116px;
+}
+
+
+ul.main-menu li.has-sub > a:before,
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul li.has-sub > a:before {
+    color: #252525;
+    content: "\e75e";
+    display: inline-block;
+    float: right;
+    font-family: "entypo";
+    font-size: 15px;
+    margin-left: 10px;
+    position: relative;
+    @include transition(all 300ms ease-in-out);
+    font-weight: normal;
+}
+
+ul.main-menu li.active.has-sub > a:before {
+ 	@include rotate(90deg);
+	color: $brand-primary;
+}
+
+ul.main-menu li.has-sub > a:hover:before,
+ul.main-menu > li > a:focus:before,
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul li.has-sub > a:hover:before {
+	color: $brand-primary;
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li > a > span.title {
+    background-color: #F8F8F8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    left: 66px;
+    zoom: 1;
+    @include opacity(0);
+    padding: 13px 20px;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 240px;
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li > a > span.label {
+	left: 240px;
+    zoom: 1;
+    @include opacity(0);
+    position: absolute;
+    top: 15px;
+    visibility: hidden;
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li.has-sub:hover > a,
+.sidebar-collapsed .page-sidebar .main-menu > li:hover > a {
+	background-color: #F8F8F8;
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li.has-sub:hover > a > span.title,
+.sidebar-collapsed .page-sidebar .main-menu > li:hover > a > span.title,
+.sidebar-collapsed .page-sidebar .main-menu > li:hover > a > span.label {
+  visibility: visible;
+  zoom: 1;
+  @include opacity(1);
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li > ul {
+    display: block;
+    height: 0;
+    left: 66px;
+    zoom: 1;
+    @include opacity(0);
+    position: absolute;
+    top: auto;
+    visibility: hidden;
+    width: 240px;
+}
+
+.sidebar-collapsed .page-sidebar .main-menu > li.has-sub:hover > ul,
+.sidebar-collapsed .page-sidebar .main-menu > li:hover > ul {
+  visibility: visible;
+  zoom: 1;
+  @include opacity(1);
+  height: auto;
+  @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+}
+
+
+.sidebar-collapsed .page-sidebar  ul.main-menu > li > ul > li > a {
+	padding-left: 20px;
+}
+
+.sidebar-collapsed .page-sidebar ul.main-menu li ul > li > ul > li > a {
+	padding-left: 40px;
+}
+
+.sidebar-collapsed .page-sidebar ul.main-menu li ul > li > ul > li > ul > li > a {
+	padding-left: 60px;
+}
+
+.sidebar-collapsed .page-sidebar ul.main-menu li ul > li > ul > li > ul > li > ul > li > a {
+	padding-left: 80px;
+}
+
+.sidebar-collapsed .page-sidebar ul.main-menu > li.has-sub > a:before,
+.sidebar-collapsed .page-sidebar ul.main-menu li ul li:before,
+.sidebar-collapsed .page-sidebar ul.main-menu li ul li:after,
+.sidebar-collapsed .page-sidebar ul.main-menu li ul:before,
+.sidebar-collapsed .page-sidebar .main-menu > li.navigation-header {
+	display: none;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav li {
+	position: relative;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul {
+	display: none;
+    background-color: $nav-collapse-bg;
+    display: none;
+    left: 0;
+    list-style: outside none none;
+    margin: 0;
+    min-width: 250px;
+    padding: 0;
+    position: absolute;
+    top: auto;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul a {
+	color: #a6a5a5;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul a:hover,
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul li:hover > a {
+	background-color: #242424;
+	color: $brand-white;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav  > li.active > a,
+.page-container.horizontal-menu header.navbar .navbar-nav  > li:hover > a,
+.page-container.horizontal-menu header.navbar .navbar-nav li > ul li.active  a {
+	background-color: $brand-primary;
+    color: $brand-white;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li:hover > ul {
+	display: block;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li ul li:hover ul {
+	display: block;
+	left: 100%;
+	top: 0;
+}
+
+
+.page-container.horizontal-menu header.navbar .navbar-nav {
+	list-style: none;
+	padding: 0;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-nav > li > a {
+    color: #ebebeb;
+    display: block;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.page-container.horizontal-menu header.navbar .navbar-toggle {
+	font-size: 30px;
+	color: #c8c8c8;
+	margin: 0;
+	padding: 8px 10px;
+}
+
+.navbar-toggle i.icon-menu {
+	line-height: 1;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+
+	.page-sidebar .sidebar-fixed {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	.sidebar-fixed.ps-container {
+		overflow: visible !important;
+	}
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+	.site-header { padding: 15px 20px; }
+
+	.page-sidebar { display: block; width: 100%;  height: auto; }
+
+	ul.main-menu {
+		margin-bottom: 0;
+		border: 0 none;
+        @include box-shadow(none);
+	}
+
+
+}

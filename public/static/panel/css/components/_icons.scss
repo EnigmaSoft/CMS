@@ -1,0 +1,36 @@
+/* 26. Icons
+   ========================================================================== */
+
+.icons-showcase > div {
+    cursor: pointer;
+    padding: 7px 15px;
+	@include border-radius(2px);
+	@include text-overflow();
+}
+
+.icons-showcase > div {
+  &:hover {
+  	background-color: $brand-primary;
+  	color: #FFF;
+  	.text-muted {
+  	    color: #FFF;
+     }
+  }
+  & > i {
+  	  margin-right: 10px;
+  	  text-align: center;
+   }
+}
+
+.glyphicon {
+	vertical-align: middle;
+}
+
+.icon-2x {
+	font-size: 2.2em;
+}
+
+.icon-larger,
+.panel-tool-options .icon-2x {
+	font-size: 18px;
+}

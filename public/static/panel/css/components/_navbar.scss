@@ -1,0 +1,17 @@
+/* 06. Navbar
+   ========================================================================== */
+
+.navbar-inverse {
+	 background-color: #1d1d1d;
+}
+
+.navbar-inverse .navbar-nav {
+  > .active {
+      > a,
+      > a:hover,
+      > a:focus {
+		  background-color: #0f0f0f;
+		  color: $brand-white;
+    }
+  }
+}

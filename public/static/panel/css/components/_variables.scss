@@ -1,0 +1,323 @@
+/*
+Author       : G-axon
+Template Name: Integral - Admin Template
+Version      : 3.0
+*/
+/*=============================================================
+    Table of Contents:
+    =============================
+    01. Global
+    02. Typography
+    03. Base
+    04. Sidebar
+    05. Header
+    06. Navbar
+    07. Dashboard
+    08. Views
+    09. Breadcrumbs
+    10. Panels
+    11. Filter
+    12. Pager & Pagination
+	13. Alerts
+	14. Popovers
+	15. Tables
+	16. Forms
+	17. Input Groups
+	18. Labels
+	19. Badges
+	20. Navs
+	21. Accordions
+	22. Buttons
+	23. Progress bars
+	24. Graphs
+	25. Mailbox
+	26. Icons
+	27. Carousel
+	28. Various Screens
+	29. Footer
+	30. Stats
+	31. Comments
+	32. Lockscreen
+  =============================================================*/
+
+
+//== Ingegral variables
+//
+
+
+//== Colors
+//
+
+$gray-base:              #000 !default;
+$gray-darker:            #1D1D1D !default;
+$gray-dark:              #505050 !default;
+$gray:                   #434343 !default;
+$gray-light:             #666 !default;
+$gray-lighter:           #f8f8f8 !default;
+
+$brand-primary:         #036eff !default;
+$brand-success:         #029b17 !default;
+$brand-info:            #29b6f6 !default;
+$brand-warning:         #ffc400 !default;
+$brand-danger:          #ff0018 !default;
+$brand-blue:            #0057a1 !default;
+$brand-secondary:       #ec407a !default;
+$brand-green:           #00bf6c !default;
+$brand-white:           #FFFFFF !default;
+$brand-teal:            #26A69A !default;
+
+
+$state-green-text:      $brand-green !default;
+$state-red-text:        #FF0000 !default;
+$state-purple-text:     #7E57C2 !default;
+
+$link-color: $gray !default;
+
+//== Fonts
+//
+
+
+$font-roboto:                   'Roboto', sans-serif;
+$font-family-source-sans-pro:   'Source Sans Pro', sans-serif;
+$font-family-base:               $font-family-source-sans-pro !default;
+
+
+//== Backgrounds Colors
+//
+
+$sidebar-bg:             $gray-lighter !default;
+$nav-hover-bg:           $sidebar-bg !default;
+$nav-collapse-bg:        #0f0f0f !default;
+
+//== Typography
+//
+
+// Header Styles
+$h1-fontsize: 36px !default;
+$h2-fontsize: 24px !default;
+$h3-fontsize: 20px !default;
+$h4-fontsize: 18px !default;
+$h5-fontsize: 14px !default;
+$h6-fontsize: 12px !default;
+
+//== Components
+//
+
+$border-radius-base:        3px !default;
+$border-radius-large:		6px !default;
+$border-radius-small:		2px !default;
+
+
+
+//== Form states and alerts
+//
+
+$state-success-text:             $brand-success !default;
+$state-success-bg:               $brand-success !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -0), 0%) !default;
+
+$state-info-text:                $brand-info !default;
+$state-info-bg:                  $brand-info !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -0), 0%) !default;
+
+$state-warning-text:             $brand-warning !default;
+$state-warning-bg:               $brand-warning !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -0), 0%) !default;
+
+$state-danger-text:              $brand-danger !default;
+$state-danger-bg:                $brand-danger !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -0), 0%) !default;
+
+//== Alerts
+//
+
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius-base !default;
+$alert-link-font-weight:      bold !default;
+
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          #FFF !default;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             #FFF !default;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          #FFF !default;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-text:           #FFF !default;
+$alert-danger-border:         $state-danger-border !default;
+
+//== Panels
+//
+
+$panel-bg:                    #fff !default;
+$panel-body-padding:          20px 30px !default;
+$panel-heading-padding:       15px 30px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
+$panel-border-radius:         $border-radius-base !default;
+
+//** Border color for elements within panels
+$panel-inner-border:          #ddd !default;
+$panel-footer-bg:             #f8f8f8 !default;
+
+$panel-default-text:          $gray-dark !default;
+$panel-default-border:        #ddd !default;
+$panel-default-heading-bg:    #fff !default;
+
+$panel-primary-text:          #fff !default;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    $brand-primary !default;
+
+$panel-success-text:          #FFF !default;
+$panel-success-border:        $state-success-border !default;
+$panel-success-heading-bg:    $state-success-bg !default;
+
+$panel-info-text:             #FFF !default;
+$panel-info-border:           $state-info-border !default;
+$panel-info-heading-bg:       $state-info-bg !default;
+
+$panel-warning-text:          #FFF !default;
+$panel-warning-border:        $state-warning-border !default;
+$panel-warning-heading-bg:    $state-warning-bg !default;
+
+$panel-danger-text:           #FFF !default;
+$panel-danger-border:         $state-danger-border !default;
+$panel-danger-heading-bg:     $state-danger-bg !default;
+
+//== Labels
+//
+
+$label-default-bg:            $gray-light !default;
+$label-primary-bg:            $brand-primary !default;
+$label-success-bg:            $brand-success !default;
+$label-info-bg:               $brand-info !default;
+$label-warning-bg:            $brand-warning !default;
+$label-danger-bg:             $brand-danger !default;
+$label-secondary-bg:          $brand-secondary !default;
+
+//** Default label text color
+$label-color:                 #fff !default;
+$label-link-hover-color:      #fff !default;
+
+//== Badges
+//
+
+$badge-default-bg:            $gray-light !default;
+$badge-primary-bg:            $brand-primary !default;
+$badge-success-bg:            $brand-success !default;
+$badge-info-bg:               $brand-info !default;
+$badge-warning-bg:            $brand-warning !default;
+$badge-danger-bg:             $brand-danger !default;
+$badge-secondary-bg:          $brand-secondary !default;
+
+//** Default label text color
+$badge-color:                 #fff !default;
+$badge-link-hover-color:      #fff !default;
+
+
+//== Buttons
+//
+
+$btn-font-weight:                600 !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 0%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 0%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 0%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 0%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 0%) !default;
+
+$btn-secondary-color:            #fff !default;
+$btn-secondary-bg:               $brand-secondary !default;
+$btn-secondary-border:           darken($btn-secondary-bg, 0%) !default;
+
+$btn-blue-color:                 #fff !default;
+$btn-blue-bg:                    $brand-blue !default;
+$btn-blue-border:                darken($btn-blue-bg, 0%) !default;
+
+$btn-black-color:                #fff !default;
+$btn-black-bg:                   $gray-base !default;
+$btn-black-border:               darken($btn-black-bg, 0%) !default;
+
+
+$btn-link-disabled-color:        $gray-light !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-large !default;
+$btn-border-radius-small:        $border-radius-small !default;
+
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+$progress-bg:                 #f8f8f8 !default;
+
+//** Progress bar text color
+$progress-bar-color:          #fff !default;
+
+//** Variable for setting rounded corners on progress bar.
+$progress-border-radius:      $border-radius-base !default;
+
+//** Default progress bar color
+$progress-bar-bg:             $brand-primary !default;
+//** Success progress bar color
+$progress-bar-success-bg:     $brand-success !default;
+//** Warning progress bar color
+$progress-bar-warning-bg:     $brand-warning !default;
+//** Danger progress bar color
+$progress-bar-danger-bg:      $brand-danger !default;
+//** Info progress bar color
+$progress-bar-info-bg:        $brand-info !default;
+
+
+//== Media queries breakpoints
+//
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;

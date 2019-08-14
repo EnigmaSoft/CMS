@@ -1,0 +1,87 @@
+/* 25. Mailbox
+   ========================================================================== */
+
+.mail-box {
+	background-color: #FFF;
+    @include box-shadow(2px 1px 5px rgba(0, 0, 0, 0.25));
+	margin-bottom: 25px;
+}
+
+.mail-box-header {
+	padding: 25px 20px 15px;
+}
+
+.mail-body {
+	padding: 20px;
+	position: relative;
+	border-top: solid 1px #dedede;
+}
+
+.mail-tools {
+	clear: both;
+}
+
+h3.mail-title {
+	float: left;
+	width: 60%;
+	padding-right: 20px;
+	font-weight: 400;
+}
+
+.mail-title span.count {
+    color: #b5b5b5;
+}
+
+form.mail-search {
+	float: left;
+	width: 40%;
+}
+
+.table-mails .unread a {
+	font-weight: 600;
+}
+
+
+ul.mail-list,
+ul.category-list {
+	font-size: 16px;
+	margin: 20px 0;
+
+	li {
+		   margin-bottom: 1px;
+
+		a {
+			padding: 10px 20px;
+			display: block;
+			&:hover {
+				background-color: #eeeeee;
+				color: #434343;
+			}
+		}
+
+		.fa {
+			margin-right: 10px;
+		}
+
+		&.active a {
+			background-color: #eeeeee;
+			@include border-radius(3px);
+			font-weight: 600;
+		}
+	}
+}
+
+ul.mail-attachment li {
+	width: 180px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 560px) {
+
+	h3.mail-title,
+	form.mail-search {
+		float: none;
+		width: auto;
+	}
+
+}

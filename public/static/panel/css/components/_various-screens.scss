@@ -1,0 +1,92 @@
+/* 28. Various Screens
+   ========================================================================== */
+
+/**
+ * Login Page
+ */
+
+.login-container {
+	padding: 30px 0;
+	position: relative;
+}
+
+.login-branding {
+    margin: auto;
+    padding: 30px 0;
+    text-align: center;
+    width: 420px;
+	max-width: 94%;
+}
+
+.login-content {
+   width: 420px;
+   margin: auto;
+   padding: 30px 30px 15px;
+   background-color: $brand-white;
+   $shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   @include box-shadow($shadow);
+   @include border-radius(3px);
+   font-size: 16px;
+   max-width: 94%;
+}
+
+.login-avatar {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.login-avatar img {
+	width: 160px;
+	height: 160px;
+}
+
+.login-content .input-group-addon [class^="icon-"],
+.login-content .input-group-addon [class*=" icon-"] {
+	margin: 0;
+}
+
+.login-content .form-control {
+	border: 0 none;
+	border-bottom: solid 2px #ccc;
+	padding: 8px 0;
+	font-size: 16px;
+	@include border-radius(0);
+	height: 36px;
+}
+
+.login-content .form-action { margin-top: 30px; }
+
+.login-content .btn { font-size: 16px; padding: 8px 12px; }
+
+.login-content a { color: $brand-primary }
+
+.login-content a:hover { color: $gray-base; }
+
+/**
+ * Error Page
+ */
+
+.page-error-container {
+	padding: 40px 0;
+	position: relative;
+}
+
+.page-error-content {
+	margin: 0 auto;
+	padding: 40px 0;
+	width: 380px;
+	max-width: 94%;
+}
+
+.error-code {
+	color: #FFF;
+	font-size: 160px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 600;
+}
+
+.page-error-content h4 {
+	margin-bottom: 30px;
+	font-size: 16px;
+}

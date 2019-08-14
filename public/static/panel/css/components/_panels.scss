@@ -1,0 +1,147 @@
+/* 10. Panels
+   ========================================================================== */
+
+.panel {
+  @include border-radius(0);
+  @include box-shadow(0 0 1px rgba(0, 0, 0, 0.05));
+  margin-bottom: 25px;
+}
+
+.shadowless,
+.panel-minimal {
+	@include box-shadow(none);
+}
+
+.panel-body {
+	position: relative;
+	padding: $panel-body-padding;
+}
+
+.panel-minimal > .panel-heading  {
+	border-color: #ddd;
+}
+
+.panel-minimal > .panel-heading,
+.panel-minimal > .panel-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.panel-minimal > .panel-heading > .nav-right {
+	float: right;
+	margin: 0 0 -16px;
+}
+
+.panel-minimal > .panel-heading > .nav-tabs > li > a {
+	padding: 6px 15px;
+}
+
+.minimal .panel-body {
+	padding: 20px;
+}
+
+.panel-group .panel + .panel {
+	margin-top: 0;
+}
+
+.panel-heading, .panel-group .panel,
+.panel-group .panel:first-child,
+.panel-group .panel:last-child {
+	@include border-radius(0);
+}
+
+
+.panel-heading {
+	padding: $panel-heading-padding;
+}
+
+.minimal .panel-heading {
+	padding: 12px 20px;
+}
+
+.panel-heading > .panel-title {
+    float: left;
+	font-size: 16px;
+}
+
+
+.panel-heading .panel-tool-options {
+	float: right;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+	margin-right: -0.5em;
+}
+
+.panel-heading .panel-tool-options > li > a {
+	color: #434343;
+}
+
+.panel-success .panel-tool-options > li > a,
+.panel-primary .panel-tool-options > li > a,
+.panel-danger .panel-tool-options > li > a,
+.panel-warning .panel-tool-options > li > a,
+.panel-info .panel-tool-options > li > a {
+	color: inherit;
+}
+
+.panel-heading .panel-tool-options > li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.panel-heading .panel-tool-options .dropdown-menu > li > a {
+	padding: 5px 12px;
+}
+
+.minimal .panel-heading .panel-tool-options {
+	margin-right: -0.25em;
+}
+
+.panel-default > .panel-heading {
+	background-color: #FFF;
+}
+
+.panel-invert {
+	border-color: $brand-primary;
+	background-color: $brand-primary;
+	color: #FFF;
+}
+
+.panel-invert > .panel-heading {
+	background-color: $brand-primary;
+	color: #FFF;
+}
+
+.panel-content.panel-content {
+	padding-top: 0;
+}
+
+.panel > .panel-body.with-table {
+    border: 0 none;
+    margin: -1px;
+    padding: 0;
+}
+
+.panel-body.with-table .table { margin-bottom: 0; }
+
+
+// Contextual variations
+.panel-default {
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+}
+.panel-primary {
+  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+}
+.panel-success {
+  @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+}
+.panel-info {
+  @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+}
+.panel-warning {
+  @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+}
+.panel-danger {
+  @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+}
