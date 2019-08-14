@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6177497f7ff3c48fdea21bc7c4abb091",
+    "content-hash": "50cd836c64b4351a6d3603c1e1f3ef5d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -281,10 +281,16 @@
         {
             "name": "enigmasoft/status",
             "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../packages/enigmasoft/status",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EnigmaSoft/Status.git",
                 "reference": "655e30585a1cc37075286dc0ba8bffe7222b529e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EnigmaSoft/Status/zipball/655e30585a1cc37075286dc0ba8bffe7222b529e",
+                "reference": "655e30585a1cc37075286dc0ba8bffe7222b529e",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "^5.5"
@@ -305,6 +311,7 @@
                     "Enigma\\Status\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "CC-BY-NC-4.0"
             ],
@@ -314,15 +321,22 @@
                     "email": "snopboy@localhost.com"
                 }
             ],
-            "description": "Implements Server Status functionality to EnigmaCMS"
+            "description": "Implements Server Status functionality to EnigmaCMS",
+            "time": "2019-08-14T16:50:56+00:00"
         },
         {
             "name": "enigmasoft/theme",
             "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../packages/enigmasoft/theme",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/EnigmaSoft/Theme.git",
                 "reference": "297d9cdbfbb9d501ce60c372b969e29ab4c92319"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/EnigmaSoft/Theme/zipball/297d9cdbfbb9d501ce60c372b969e29ab4c92319",
+                "reference": "297d9cdbfbb9d501ce60c372b969e29ab4c92319",
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "^5.5"
@@ -346,6 +360,7 @@
                     "Enigma\\Theme\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "CC-BY-NC-4.0"
             ],
@@ -355,7 +370,8 @@
                     "email": "snopboy@localhost.com"
                 }
             ],
-            "description": "Implements Theme functionality for EnigmaCMS"
+            "description": "Implements Theme functionality for EnigmaCMS",
+            "time": "2019-08-14T16:50:37+00:00"
         },
         {
             "name": "erusev/parsedown",

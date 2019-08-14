@@ -476,14 +476,21 @@
         "name": "enigmasoft/status",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
-        "dist": {
-            "type": "path",
-            "url": "../packages/enigmasoft/status",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EnigmaSoft/Status.git",
             "reference": "655e30585a1cc37075286dc0ba8bffe7222b529e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/EnigmaSoft/Status/zipball/655e30585a1cc37075286dc0ba8bffe7222b529e",
+            "reference": "655e30585a1cc37075286dc0ba8bffe7222b529e",
+            "shasum": ""
         },
         "require": {
             "illuminate/support": "^5.5"
         },
+        "time": "2019-08-14T16:50:56+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -501,6 +508,7 @@
                 "Enigma\\Status\\": "src/"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "CC-BY-NC-4.0"
         ],
@@ -516,14 +524,21 @@
         "name": "enigmasoft/theme",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
-        "dist": {
-            "type": "path",
-            "url": "../packages/enigmasoft/theme",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EnigmaSoft/Theme.git",
             "reference": "297d9cdbfbb9d501ce60c372b969e29ab4c92319"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/EnigmaSoft/Theme/zipball/297d9cdbfbb9d501ce60c372b969e29ab4c92319",
+            "reference": "297d9cdbfbb9d501ce60c372b969e29ab4c92319",
+            "shasum": ""
         },
         "require": {
             "illuminate/support": "^5.5"
         },
+        "time": "2019-08-14T16:50:37+00:00",
         "type": "library",
         "extra": {
             "laravel": {
@@ -544,6 +559,7 @@
                 "Enigma\\Theme\\": "src/"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "CC-BY-NC-4.0"
         ],
