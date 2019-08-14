@@ -16,6 +16,7 @@
 /public/static/img/rankings/Weapon
 /storage/*.key
 /vendor
+/composer.lock
 /.idea
 /.vagrant
 Homestead.json
