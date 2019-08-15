@@ -1131,7 +1131,7 @@ input[type=radio].custom-component {
 .main-container-left .nav-pills>li.active>a,
 .main-container-left .nav-pills>li.active>a:focus,
 .main-container-left .nav-pills>li.active>a:hover {
-    background-color: #e0e0e0;
+    background-color: #0090FF;
 }
 
 .user-character {}
@@ -1175,7 +1175,8 @@ input[type=radio].custom-component {
     word-break: keep-all !important;
 }
 
-.user-character+.tooltip .tooltip-inner {
+.user-character+.tooltip .tooltip-inner,
+img+.tooltip .tooltip-inner {
     max-width: 450px !important;
 }
 
