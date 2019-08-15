@@ -17,6 +17,7 @@
 									</div>
 									<div class="well">
 										<ul class="nav nav-pills nav-justified">
+											<li class="{{ Route::currentRouteName() == 'rankings' ? 'active' : '' }}"><a href="{{ route('rankings') }}"><img src="{{ asset('static/img/rankings/icons/overall.png') }}" data-toggle="tooltip" title="Overall Rankings" alt="All"/></a></li>
 											<li class="{{ Route::currentRouteName() == 'jobRankings' && $class == 'beginner' ? 'active' : '' }}"><a href="{{ route('jobRankings', ['class' => 'beginner']) }}"><img src="{{ asset('static/img/rankings/icons/beginner.png') }}" data-toggle="tooltip" title="Beginner" alt="Beginner"/></a></li>
 											<li class="{{ Route::currentRouteName() == 'jobRankings' && $class == 'warrior' ? 'active' : '' }}"><a href="{{ route('jobRankings', ['class' => 'warrior']) }}"><img src="{{ asset('static/img/rankings/icons/warrior.png') }}" data-toggle="tooltip" title="Warrior" alt="Warrior"/></a></li>
 											<li class="{{ Route::currentRouteName() == 'jobRankings' && $class == 'magician' ? 'active' : '' }}"><a href="{{ route('jobRankings', ['class' => 'magician']) }}"><img src="{{ asset('static/img/rankings/icons/magician.png') }}" data-toggle="tooltip" title="Magician" alt="Magician"/></a></li>
