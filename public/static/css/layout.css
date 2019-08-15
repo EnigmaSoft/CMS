@@ -1168,6 +1168,24 @@ input[type=radio].custom-component {
     border-radius: 4px
 }
 
+.main-container-left div[class^="col-"],
+.main-container-left label[class^="col-"]{
+    position: unset;
+}
+
+.user-character + .tooltip {
+    word-break: keep-all !important;
+}
+
+.user-character + .tooltip .tooltip-inner {
+    max-width: 450px !important;
+}
+
+.user-character + .tooltip.top {
+    border-top-color: rgba(0, 0, 0, 0.9);
+    margin-top: 20px !important;
+}
+
 .tooltip.top .tooltip-arrow {
     border-top-color: rgba(0, 0, 0, 0.9);
 }

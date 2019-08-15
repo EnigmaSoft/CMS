@@ -36,7 +36,7 @@
                             <input id="character-{{ $character->name }}" class="hidden" type="radio" name="character" value="{{ $character->name }}" {{ Auth::user()->mainchar == $character->id ? 'checked' : '' }} />
                             <label class="col-sm-4" style="font-weight:normal;" for="character-{{ $character->name }}">
                                 <button type="button" class="close" aria-label="delete" data-toggle="modal" data-target="#characterRemovalModal-{{ $character->name }}" style="position: absolute;right: 15px;top: 8px;"><span aria-hidden="true">&times;</span></button>
-                                <div class="user-character" data-toggle="tooltip" data-title="{{ $character->level < 8 ? 'MapleTip: Character images are only for Level 8+' : '' }}">
+                                <div class="user-character" data-toggle="tooltip" data-html="true" data-title="{{ $character->level < 8 ? '<strong>MapleTip:</strong> Character images are only for Level 8+' : '' }}">
                                     <img src="{{ $character->level >= 8 ? asset('static/img/rankings/create.php?name='.$character->name) : asset('static/img/rankings/blank.png') }}" alt="{{ $character->name }}" class="avatar img-responsive">
                                     <span class="label label-critical">{{ $character->name }}</span><br />
                                     {{ $character->vjob }}<br />
