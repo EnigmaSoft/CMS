@@ -1,9 +1,9 @@
 <td class="col-6 align-center">
     <div class="user-character" 
         @if (isset($mainchar->retrieveMainCharacter()->level))
-            data-toggle="tooltip" data-html="true" data-title="
-            {{ $mainchar->retrieveMainCharacter()->level < 8 ? '<strong>MapleTip:</strong> Character images are only for Level 8+' : '' }}
-            "
+            @if ($mainchar->retrieveMainCharacter()->level < 8)
+                data-toggle="tooltip" data-html="true" data-title="<strong>MapleTip:</strong> Character images are only for Level 8+"
+            @endif
         @endif>
         <img src="{{ Auth::user()->mainchar
             ? $mainchar->retrieveMainCharacter()->level >= 8
