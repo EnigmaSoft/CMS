@@ -14,6 +14,7 @@ public/static/img/rankings/Shield
 public/static/img/rankings/Shoes
 public/static/img/rankings/Skin
 public/static/img/rankings/Weapon
+public/static/img/rankings/Character
 storage/*.key
 vendor
 composer.lock
