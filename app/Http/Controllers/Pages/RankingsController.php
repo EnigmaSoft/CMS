@@ -89,24 +89,17 @@ class RankingsController extends Controller
 
         $victim = null;
 
-        /*$validator = [];
-        if (!empty($request->input('class')))
-        {
-            $validator = $this->validate($request, [
-                // Do not allow any shady characters
-                //'name' => 'max:13|regex:[A-Za-z0-9 ]',
-                'class' => 'in_array:$this->jobs',
-            ]);
-
-            if ($validator->fails())
-            {
-            //    return redirect('/rankings')
-            //    ->withInput()
-            //    ->withErrors($validator);
-            }
-        }*/
-
-        //dd($validator);
+        ########################################################
+        # VALIDATION & SECURITY                                #
+        ########################################################
+        # Utilize Laravel's Request rule() for validation      #
+        # currently there's no validation in rankings at all   #
+        # in other words - hackable xD                         #
+        ########################################################
+        // Do not allow any shady characters
+        //'name' => 'max:13|regex:[A-Za-z0-9 ]',
+        //'class' => 'in_array:$this->jobs',
+;
 
         $name = $request->input('name');
         //$class = $request->input('class');
@@ -181,6 +174,7 @@ class RankingsController extends Controller
         if ($class !== null && in_array($class, $this->jobs))
         {
             $classJobs = User::${$class};
+            // Use Character model instead
             $characters = DB::table('characters')
                 ->whereBetween('job', [$classJobs[0], $classJobs[count($classJobs) - 1]])
                 ->orderBy($this->column, $this->order)
