@@ -6,7 +6,7 @@ EnigmaCMS is a web application built on-top of Laravel framework to deliver the 
 - [**Theme**](https://github.com/EnigmaSoft/Theme) - An easy way to develop, modify and use front-end themes.
 - [**Status**](https://github.com/EnigmaSoft/Status) - Server Status to show in what state your GameServer is in.
 - [**Character**](https://github.com/EnigmaSoft/Character) - To switch & display your *Main Character*.
-- [**Informant**](https://github.com/EnigmaSoft/Character) - To deliver site-wide messages on-the-go.
+- [**Informant**](https://github.com/EnigmaSoft/Informant) - To deliver site-wide messages on-the-go.
 
 And so much more!
 
